@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" data-provider-thread-count="10" parallel="methods" thread-count="10">
+    <test verbose="2" preserve-order="true"
+          name="C:/Selenium Projects/MultiThreader/src/test/java/test/PageTestWithExcel.java">
+<!--        <classes>-->
+<!--            <class name="test.PageTestWithExcel">-->
+<!--                <methods>-->
+<!--                    <include name="performSearch"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+        <packages>
+            <package name="test"></package>
+        </packages>
+    </test>
+</suite>
