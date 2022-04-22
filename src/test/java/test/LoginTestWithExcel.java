@@ -5,6 +5,8 @@ import org.testng.annotations.Test;
 import pages.LoginPage;
 import testdata.datasources.SearchData;
 
+import java.io.IOException;
+
 public class LoginTestWithExcel extends BaseTest {
 
 //    @Test(dataProvider = "searchData", dataProviderClass = SearchData.class)
@@ -13,4 +15,10 @@ public class LoginTestWithExcel extends BaseTest {
 //        loginPage.openPage();
 //        loginPage.login(username, password);
 //    }
+
+
+    public static void main(String args[]) throws IOException {
+        for (int i=0; i<=20; i++)
+            Runtime.getRuntime().exec("taskkill /F /IM ChromeDriver.exe");
+    }
 }
