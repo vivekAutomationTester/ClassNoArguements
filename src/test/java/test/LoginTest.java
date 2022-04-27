@@ -9,13 +9,24 @@ public class LoginTest extends BaseTest {
 
     @Test
     public void login_standardUser() throws Exception {
+
         LoginPage loginPage = new LoginPage(webdriver.get(), reportManager);
         loginPage.openPage();
+
+        // Verify that the log in page is displayed
+        assert(loginPage.verifyLoginPageDisplayed());
         loginPage.login("standard_user", "secret_sauce");
         HomePage homePage = new HomePage(webdriver.get(), reportManager);
+
+        // Verify that the user is logged in
+        assert(homePage.verifyUserIsLoggedIn());
         homePage.verifyUserIsLoggedIn();
         homePage.logout();
+
+        // Verify that the user is logged out
+        assert(loginPage.verifyLoginPageDisplayed());
         loginPage.verifyLoginPageDisplayed();
+
     }
 
     @Test
@@ -62,225 +73,6 @@ public class LoginTest extends BaseTest {
 
     }
 
-    @Test
-    public void login_standardUser1() throws Exception {
-        LoginPage loginPage = new LoginPage(webdriver.get(), reportManager);
-        loginPage.openPage();
-        loginPage.login("standard_user", "secret_sauce");
-        HomePage homePage = new HomePage(webdriver.get(), reportManager);
-        homePage.verifyUserIsLoggedIn();
-        homePage.logout();
-        loginPage.verifyLoginPageDisplayed();
-    }
-
-    @Test
-    public void login_lockedOutUser1() throws Exception {
-        LoginPage loginPage = new LoginPage(webdriver.get(), reportManager);
-        loginPage.openPage();
-        loginPage.login("locked_out_user", "secret_sauce");
-        String errorMessage = loginPage.getErrorMessageDisplayed().trim();
-        assert(errorMessage.contains("Sorry, this user has been locked out"));
-    }
-
-    @Test
-    public void login_problem_user1() throws Exception {
-        LoginPage loginPage = new LoginPage(webdriver.get(), reportManager);
-        loginPage.openPage();
-        loginPage.login("problem_user", "secret_sauce");
-        HomePage homePage = new HomePage(webdriver.get(), reportManager);
-        homePage.verifyUserIsLoggedIn();
-        homePage.logout();
-        loginPage.verifyLoginPageDisplayed();
-
-    }
-
-    @Test
-    public void login_performanceGlitchUser1() throws Exception {
-        LoginPage loginPage = new LoginPage(webdriver.get(), reportManager);
-        loginPage.openPage();
-        loginPage.login("performance_glitch_user", "secret_sauce");
-        HomePage homePage = new HomePage(webdriver.get(), reportManager);
-        homePage.verifyUserIsLoggedIn();
-        homePage.logout();
-        loginPage.verifyLoginPageDisplayed();
-    }
-
-    @Test
-    public void login_validUser1() throws Exception {
-        LoginPage loginPage = new LoginPage(webdriver.get(), reportManager);
-        loginPage.openPage();
-        loginPage.login("standard_user", "secret_sauce");
-        HomePage homePage = new HomePage(webdriver.get(), reportManager);
-        homePage.verifyUserIsLoggedIn();
-        homePage.logout();
-        loginPage.verifyLoginPageDisplayed();
-
-    }
-
-    @Test
-    public void login_standardUser2() throws Exception {
-        LoginPage loginPage = new LoginPage(webdriver.get(), reportManager);
-        loginPage.openPage();
-        loginPage.login("standard_user", "secret_sauce");
-        HomePage homePage = new HomePage(webdriver.get(), reportManager);
-        homePage.verifyUserIsLoggedIn();
-        homePage.logout();
-        loginPage.verifyLoginPageDisplayed();
-    }
-
-    @Test
-    public void login_lockedOutUser2() throws Exception {
-        LoginPage loginPage = new LoginPage(webdriver.get(), reportManager);
-        loginPage.openPage();
-        loginPage.login("locked_out_user", "secret_sauce");
-        String errorMessage = loginPage.getErrorMessageDisplayed().trim();
-        assert(errorMessage.contains("Sorry, this user has been locked out"));
-    }
-
-    @Test
-    public void login_problem_user2() throws Exception {
-        LoginPage loginPage = new LoginPage(webdriver.get(), reportManager);
-        loginPage.openPage();
-        loginPage.login("problem_user", "secret_sauce");
-        HomePage homePage = new HomePage(webdriver.get(), reportManager);
-        homePage.verifyUserIsLoggedIn();
-        homePage.logout();
-        loginPage.verifyLoginPageDisplayed();
-
-    }
-
-    @Test
-    public void login_performanceGlitchUser2() throws Exception {
-        LoginPage loginPage = new LoginPage(webdriver.get(), reportManager);
-        loginPage.openPage();
-        loginPage.login("performance_glitch_user", "secret_sauce");
-        HomePage homePage = new HomePage(webdriver.get(), reportManager);
-        homePage.verifyUserIsLoggedIn();
-        homePage.logout();
-        loginPage.verifyLoginPageDisplayed();
-    }
-
-    @Test
-    public void login_validUser2() throws Exception {
-        LoginPage loginPage = new LoginPage(webdriver.get(), reportManager);
-        loginPage.openPage();
-        loginPage.login("standard_user", "secret_sauce");
-        HomePage homePage = new HomePage(webdriver.get(), reportManager);
-        homePage.verifyUserIsLoggedIn();
-        homePage.logout();
-        loginPage.verifyLoginPageDisplayed();
-
-    }
-
-    @Test
-    public void login_standardUser3() throws Exception {
-        LoginPage loginPage = new LoginPage(webdriver.get(), reportManager);
-        loginPage.openPage();
-        loginPage.login("standard_user", "secret_sauce");
-        HomePage homePage = new HomePage(webdriver.get(), reportManager);
-        homePage.verifyUserIsLoggedIn();
-        homePage.logout();
-        loginPage.verifyLoginPageDisplayed();
-    }
-
-    @Test
-    public void login_lockedOutUser3() throws Exception {
-        LoginPage loginPage = new LoginPage(webdriver.get(), reportManager);
-        loginPage.openPage();
-        loginPage.login("locked_out_user", "secret_sauce");
-        String errorMessage = loginPage.getErrorMessageDisplayed().trim();
-        assert(errorMessage.contains("Sorry, this user has been locked out"));
-    }
-
-    @Test
-    public void login_problem_user3() throws Exception {
-        LoginPage loginPage = new LoginPage(webdriver.get(), reportManager);
-        loginPage.openPage();
-        loginPage.login("problem_user", "secret_sauce");
-        HomePage homePage = new HomePage(webdriver.get(), reportManager);
-        homePage.verifyUserIsLoggedIn();
-        homePage.logout();
-        loginPage.verifyLoginPageDisplayed();
-
-    }
-
-    @Test
-    public void login_performanceGlitchUser3() throws Exception {
-        LoginPage loginPage = new LoginPage(webdriver.get(), reportManager);
-        loginPage.openPage();
-        loginPage.login("performance_glitch_user", "secret_sauce");
-        HomePage homePage = new HomePage(webdriver.get(), reportManager);
-        homePage.verifyUserIsLoggedIn();
-        homePage.logout();
-        loginPage.verifyLoginPageDisplayed();
-    }
-
-    @Test
-    public void login_validUser3() throws Exception {
-        LoginPage loginPage = new LoginPage(webdriver.get(), reportManager);
-        loginPage.openPage();
-        loginPage.login("standard_user", "secret_sauce");
-        HomePage homePage = new HomePage(webdriver.get(), reportManager);
-        homePage.verifyUserIsLoggedIn();
-        homePage.logout();
-        loginPage.verifyLoginPageDisplayed();
-
-    }
-
-    @Test
-    public void login_standardUser4() throws Exception {
-        LoginPage loginPage = new LoginPage(webdriver.get(), reportManager);
-        loginPage.openPage();
-        loginPage.login("standard_user", "secret_sauce");
-        HomePage homePage = new HomePage(webdriver.get(), reportManager);
-        homePage.verifyUserIsLoggedIn();
-        homePage.logout();
-        loginPage.verifyLoginPageDisplayed();
-    }
-
-    @Test
-    public void login_lockedOutUser4() throws Exception {
-        LoginPage loginPage = new LoginPage(webdriver.get(), reportManager);
-        loginPage.openPage();
-        loginPage.login("locked_out_user", "secret_sauce");
-        String errorMessage = loginPage.getErrorMessageDisplayed().trim();
-        assert(errorMessage.contains("Sorry, this user has been locked out"));
-    }
-
-    @Test
-    public void login_problem_user4() throws Exception {
-        LoginPage loginPage = new LoginPage(webdriver.get(), reportManager);
-        loginPage.openPage();
-        loginPage.login("problem_user", "secret_sauce");
-        HomePage homePage = new HomePage(webdriver.get(), reportManager);
-        homePage.verifyUserIsLoggedIn();
-        homePage.logout();
-        loginPage.verifyLoginPageDisplayed();
-
-    }
-
-    @Test
-    public void login_performanceGlitchUser4() throws Exception {
-        LoginPage loginPage = new LoginPage(webdriver.get(), reportManager);
-        loginPage.openPage();
-        loginPage.login("performance_glitch_user", "secret_sauce");
-        HomePage homePage = new HomePage(webdriver.get(), reportManager);
-        homePage.verifyUserIsLoggedIn();
-        homePage.logout();
-        loginPage.verifyLoginPageDisplayed();
-    }
-
-    @Test
-    public void login_validUser4() throws Exception {
-        LoginPage loginPage = new LoginPage(webdriver.get(), reportManager);
-        loginPage.openPage();
-        loginPage.login("standard_user", "secret_sauce");
-        HomePage homePage = new HomePage(webdriver.get(), reportManager);
-        homePage.verifyUserIsLoggedIn();
-        homePage.logout();
-        loginPage.verifyLoginPageDisplayed();
-
-    }
 
 
 }

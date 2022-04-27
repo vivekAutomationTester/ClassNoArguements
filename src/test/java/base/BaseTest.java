@@ -30,6 +30,7 @@ public class BaseTest {
     public void closeBrowser()
     {
         webdriver.get().quit();
+        webdriver.remove();
     }
 
 }
