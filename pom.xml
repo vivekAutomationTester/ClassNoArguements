@@ -16,7 +16,6 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-    <suiteFile></suiteFile>
   </properties>
 
   <dependencies>
@@ -32,12 +31,7 @@
       <artifactId>selenium-java</artifactId>
       <version>4.1.3</version>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
-    <dependency>
-      <groupId>com.aventstack</groupId>
-      <artifactId>extentreports</artifactId>
-      <version>4.1.3</version>
-    </dependency>
+
     <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
     <dependency>
       <groupId>io.github.bonigarcia</groupId>
@@ -100,9 +94,14 @@
           <version>2.22.1</version>
           <configuration>
             <suiteXmlFiles>
-              <suiteXmlFile>${suiteFile}</suiteXmlFile>
+
             </suiteXmlFiles>
           </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-report-plugin</artifactId>
+          <version>3.0.0-M5</version>
         </plugin>
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
