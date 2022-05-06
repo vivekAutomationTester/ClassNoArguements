@@ -94,8 +94,16 @@
           <version>2.22.1</version>
           <configuration>
             <suiteXmlFiles>
-              <suiteXmlFile>testng.xml</suiteXmlFile>
+              <!--suppress UnresolvedMavenProperty -->
+              <file>src/test/resources/testng.xml</file>
+              <file>src/test/resources/testng-QuickTest.xml</file>
             </suiteXmlFiles>
+            <properties>
+              <property>
+                <name>suitethreadpoolsize</name>
+                <value>2</value>
+              </property>
+            </properties>
           </configuration>
         </plugin>
         <plugin>
