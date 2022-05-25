@@ -1,14 +1,13 @@
 package pages;
 
+import com.aventstack.extentreports.ExtentTest;
 import library.BasePage;
-import library.DriverObj;
-import library.ReportManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class LoginPage extends BasePage {
-    public LoginPage(WebDriver driver, ReportManager reportManager) {
+    public LoginPage(WebDriver driver, ExtentTest reportManager) {
         super(driver, reportManager);
     }
 
@@ -21,13 +20,13 @@ public class LoginPage extends BasePage {
     {
         waitFor().pageToLoad();
         WebElement usernameTextBox = findElement(By.cssSelector("#user-name"));
-        setText(usernameTextBox, username);
+        setText(usernameTextBox, "Username Textbox", username);
 
         WebElement passwordTextBox = findElement(By.cssSelector("#password"));
-        setText(passwordTextBox, password);
+        setText(passwordTextBox,"Password Textbox", password);
 
         WebElement loginButton = findElement(By.cssSelector("#login-button"));
-        clickField(loginButton);
+        clickField(loginButton, "Login Button");
     }
 
     public boolean verifyLoginPageDisplayed()

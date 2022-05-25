@@ -14,21 +14,27 @@ public class Browser {
         this.driver = driver;
     }
 
+    /**
+     * Maximize() maximizes the window.
+     */
     public void maximize()
     {
 
     }
 
+    // Minimizing the browser window.
     public void minimize()
     {
 
     }
 
+    // Refreshing the page.
     public void refreshPage()
     {
 
     }
 
+    // Opening the URL.
     public void openUrl()
     {
 
@@ -59,6 +65,9 @@ public class Browser {
 
     }
 
+    /**
+     * Wait for the page to load, and then return the page's readyState
+     */
     public void pageToLoad()
     {
         new WebDriverWait(driver, Duration.ofSeconds(30)).until(

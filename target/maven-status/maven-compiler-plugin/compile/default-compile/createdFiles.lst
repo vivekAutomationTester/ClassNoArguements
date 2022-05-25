@@ -12,7 +12,6 @@ library\KeyboardHelper.class
 library\BrowserManager.class
 library\Browser.class
 library\BrowserType.class
-library\ReportManager.class
 library\UserActions.class
 library\WebElementFinder.class
 library\ExcelWriter.class

@@ -17,8 +17,5 @@ public class LoginTestWithExcel extends BaseTest {
 //    }
 
 
-    public static void main(String args[]) throws IOException {
-        for (int i=0; i<=20; i++)
-            Runtime.getRuntime().exec("taskkill /F /IM ChromeDriver.exe");
-    }
+
 }

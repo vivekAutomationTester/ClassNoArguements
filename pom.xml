@@ -19,12 +19,6 @@
   </properties>
 
   <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
-    </dependency>
     <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
@@ -70,6 +64,7 @@
     </dependency>
 
 
+
   </dependencies>
 
   <build>
@@ -95,13 +90,13 @@
           <configuration>
             <suiteXmlFiles>
               <!--suppress UnresolvedMavenProperty -->
-              <file>src/test/resources/testng.xml</file>
-              <file>src/test/resources/testng-QuickTest.xml</file>
+              <file>testng.xml</file>
             </suiteXmlFiles>
             <properties>
               <property>
-                <name>suitethreadpoolsize</name>
-                <value>2</value>
+                <name>parallel</name>
+                <value>methods</value>
+                <threadCount>3</threadCount>
               </property>
             </properties>
           </configuration>

@@ -1,13 +1,14 @@
 package library;
 
+import com.aventstack.extentreports.ExtentTest;
 import org.openqa.selenium.WebDriver;
 
 public class DriverObj {
 
     private WebDriver driver;
-    private ReportManager reportManager;
+    private ExtentTest reportManager;
 
-    public DriverObj(WebDriver driver, ReportManager reportManager) {
+    public DriverObj(WebDriver driver, ExtentTest reportManager) {
         this.driver = driver;
         this.reportManager = reportManager;
     }
@@ -20,11 +21,11 @@ public class DriverObj {
         this.driver = driver;
     }
 
-    public ReportManager getReportManager() {
+    public ExtentTest getReportManager() {
         return reportManager;
     }
 
-    public void setReportManager(ReportManager reportManager) {
+    public void setReportManager(ExtentTest reportManager) {
         this.reportManager = reportManager;
     }
 }
