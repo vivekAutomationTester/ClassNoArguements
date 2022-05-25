@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="1" total="6" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-05-24T11:13:49 AEST" name="All Test Suite" finished-at="2022-05-24T11:14:16 AEST" duration-ms="27882">
+    <groups>
+    </groups>
+    <test started-at="2022-05-24T11:13:49 AEST" name="C:/Selenium Projects/ParallelExecution1/src/test/java/test/LoginTest.Java" finished-at="2022-05-24T11:14:16 AEST" duration-ms="27882">
+      <class name="test.LoginTest">
+        <test-method is-config="true" signature="intialise()[pri:0, instance:test.LoginTest@61dd025]" started-at="2022-05-24T11:13:48 AEST" name="intialise" finished-at="2022-05-24T11:13:49 AEST" duration-ms="226" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- intialise -->
+        <test-method is-config="true" signature="setUpBrowser()[pri:0, instance:test.LoginTest@61dd025]" started-at="2022-05-24T11:13:49 AEST" name="setUpBrowser" finished-at="2022-05-24T11:13:59 AEST" duration-ms="10004" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBrowser -->
+        <test-method is-config="true" signature="setUpBrowser()[pri:0, instance:test.LoginTest@61dd025]" started-at="2022-05-24T11:13:49 AEST" name="setUpBrowser" finished-at="2022-05-24T11:13:59 AEST" duration-ms="9979" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBrowser -->
+        <test-method is-config="true" signature="setUpBrowser()[pri:0, instance:test.LoginTest@61dd025]" started-at="2022-05-24T11:13:49 AEST" name="setUpBrowser" finished-at="2022-05-24T11:13:59 AEST" duration-ms="9975" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBrowser -->
+        <test-method signature="login_lockedOutUser()[pri:0, instance:test.LoginTest@61dd025]" started-at="2022-05-24T11:13:59 AEST" name="login_lockedOutUser" finished-at="2022-05-24T11:14:03 AEST" duration-ms="4367" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login_lockedOutUser -->
+        <test-method signature="login_problem_user()[pri:0, instance:test.LoginTest@61dd025]" started-at="2022-05-24T11:13:59 AEST" name="login_problem_user" finished-at="2022-05-24T11:14:04 AEST" duration-ms="5930" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login_problem_user -->
+        <test-method signature="login_performanceGlitchUser()[pri:0, instance:test.LoginTest@61dd025]" started-at="2022-05-24T11:13:59 AEST" name="login_performanceGlitchUser" finished-at="2022-05-24T11:14:11 AEST" duration-ms="12604" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login_performanceGlitchUser -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:test.LoginTest@61dd025]" started-at="2022-05-24T11:14:03 AEST" name="closeBrowser" finished-at="2022-05-24T11:14:06 AEST" duration-ms="3080" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=login_lockedOutUser status=SUCCESS method=LoginTest.login_lockedOutUser()[pri:0, instance:test.LoginTest@61dd025] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:test.LoginTest@61dd025]" started-at="2022-05-24T11:14:04 AEST" name="closeBrowser" finished-at="2022-05-24T11:14:06 AEST" duration-ms="1842" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=login_problem_user status=SUCCESS method=LoginTest.login_problem_user()[pri:0, instance:test.LoginTest@61dd025] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="setUpBrowser()[pri:0, instance:test.LoginTest@61dd025]" started-at="2022-05-24T11:14:06 AEST" name="setUpBrowser" finished-at="2022-05-24T11:14:11 AEST" duration-ms="4625" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBrowser -->
+        <test-method is-config="true" signature="setUpBrowser()[pri:0, instance:test.LoginTest@61dd025]" started-at="2022-05-24T11:14:06 AEST" name="setUpBrowser" finished-at="2022-05-24T11:14:11 AEST" duration-ms="4494" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBrowser -->
+        <test-method signature="login_standardUser()[pri:0, instance:test.LoginTest@61dd025]" started-at="2022-05-24T11:14:11 AEST" name="login_standardUser" finished-at="2022-05-24T11:14:15 AEST" duration-ms="4155" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login_standardUser -->
+        <test-method signature="login_validUser()[pri:0, instance:test.LoginTest@61dd025]" started-at="2022-05-24T11:14:11 AEST" name="login_validUser" finished-at="2022-05-24T11:14:15 AEST" duration-ms="3788" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login_validUser -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:test.LoginTest@61dd025]" started-at="2022-05-24T11:14:11 AEST" name="closeBrowser" finished-at="2022-05-24T11:14:14 AEST" duration-ms="3046" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=login_performanceGlitchUser status=SUCCESS method=LoginTest.login_performanceGlitchUser()[pri:0, instance:test.LoginTest@61dd025] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:test.LoginTest@61dd025]" started-at="2022-05-24T11:14:15 AEST" name="closeBrowser" finished-at="2022-05-24T11:14:16 AEST" duration-ms="1785" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=login_validUser status=SUCCESS method=LoginTest.login_validUser()[pri:0, instance:test.LoginTest@61dd025] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:test.LoginTest@61dd025]" started-at="2022-05-24T11:14:15 AEST" name="closeBrowser" finished-at="2022-05-24T11:14:16 AEST" duration-ms="1619" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=login_standardUser status=SUCCESS method=LoginTest.login_standardUser()[pri:0, instance:test.LoginTest@61dd025] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- test.LoginTest -->
+    </test> <!-- C:/Selenium Projects/ParallelExecution1/src/test/java/test/LoginTest.Java -->
+  </suite> <!-- All Test Suite -->
+</testng-results>
